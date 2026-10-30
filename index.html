@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="소복소복 겨울 버킷리스트">
+  <title>나의 리스트 | 소복소복</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="list">
+  <div class="snow-layer" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="소복소복 홈">
+      <strong>소복소복</strong><span>Winter List</span>
+    </a>
+    <div class="header-actions">
+      <nav class="main-nav" aria-label="주요 메뉴">
+        <a href="index.html" data-nav="list">나의 리스트</a>
+        <a href="weather.html" data-nav="weather">날씨와 추천</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-shell list-page">
+    <section class="hero list-hero" aria-labelledby="list-title">
+      <div class="hero-copy">
+        <h1 id="list-title" aria-label="이번 겨울에는, 더 많은 것을 해보기로 했다.">이번 <span class="snow-accent">겨울</span>에는,<br><span class="title-line">더 많은 것을 해보기로 했다.</span></h1>
+      </div>
+      <div class="hero-art tree-art" aria-hidden="true">
+        <svg viewBox="0 0 520 300" role="img">
+          <g fill="none" stroke="#68765E" stroke-linecap="round" stroke-linejoin="round">
+            <path class="sketch-line" d="M54 245c75-51 139-32 205-9 67 23 126 18 205-13"/>
+            <path class="sketch-line pale" d="M29 258c79-31 144-25 210 4 74 33 144 22 249-9"/>
+            <g transform="translate(302 78)">
+              <path fill="#68765E" d="M64 0 27 70h22L14 132h100L79 70h22z"/>
+              <path stroke="#F7F8F6" d="M39 71c16 2 29 0 42-8M29 106c20 3 42 0 62-10"/>
+              <path d="M64 132v49"/>
+              <path stroke="#F7F8F6" stroke-width="8" d="M26 131c20 5 56 4 85-5"/>
+            </g>
+            <g transform="translate(215 136) scale(.68)">
+              <path fill="#68765E" d="M64 0 27 70h22L14 132h100L79 70h22z"/>
+              <path stroke="#F7F8F6" d="M39 71c16 2 29 0 42-8M29 106c20 3 42 0 62-10"/>
+              <path d="M64 132v49"/>
+            </g>
+          </g>
+          <g fill="#C9CCC6">
+            <circle cx="89" cy="63" r="3"/><circle cx="161" cy="111" r="2"/><circle cx="436" cy="61" r="3"/>
+          </g>
+          <g class="flake" fill="none" stroke="#8A9582" stroke-linecap="round">
+            <path d="M128 42v26m-11-20 22 14m0-14-22 14M360 39v30m-13-23 26 16m0-16-26 16"/>
+            <path d="M471 102v24m-10-18 20 12m0-12-20 12"/>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <section class="list-workspace" aria-label="겨울 버킷리스트">
+      <form class="add-form" id="add-form" novalidate>
+        <label class="sr-only" for="item-input">하고 싶은 일</label>
+        <input id="item-input" type="text" maxlength="80" placeholder="올겨울에 하고 싶은 일을 적어보세요." autocomplete="off">
+        <button type="submit">추가하기</button>
+      </form>
+      <p class="form-message" id="form-message" aria-live="polite"></p>
+      <div class="filter-tabs" aria-label="목록 필터">
+        <button class="active" data-filter="all" type="button" aria-pressed="true">전체 <span>0</span></button>
+        <button data-filter="active" type="button" aria-pressed="false">진행 중 <span>0</span></button>
+        <button data-filter="done" type="button" aria-pressed="false">완료 <span>0</span></button>
+      </div>
+      <ul class="bucket-list" id="bucket-list" aria-label="나의 버킷리스트"></ul>
+      <p class="empty-message" id="empty-message" hidden></p>
+    </section>
+  </main>
+  <script src="js/common.js"></script>
+  <script src="js/list.js"></script>
+</body>
+</html>
